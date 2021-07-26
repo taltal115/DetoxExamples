@@ -1,0 +1,33 @@
+{
+  "testEnvironment": "./environment",
+  "testRunner": "jest-circus/runner",
+  "testTimeout": 120000,
+  "testRegex": "\\.e2e\\.ts$",
+  "preset": "react-native",
+  "transformIgnorePatterns": [
+    "node_modules/(?!(react-native|react-native-.*|react-navigation|react-navigation-.*|@react-navigation|@storybook|@react-native-community)/)",
+    "@shared/"
+  ],
+  "transform": {
+    "^.+\\.[jt]sx?$": [
+      "babel-jest",
+      {
+        "configFile": "./babel.config.js"
+      }
+    ]
+  },
+  "roots": ["."],
+  "reporters": [
+    "jest-standard-reporter",
+    "detox/runners/jest/streamlineReporter",
+    [
+      "jest-html-reporters",
+      {
+        "publicPath": "./reports/html-report",
+        "expand": true,
+        "openReport": false
+      }
+    ]
+  ],
+  "verbose": true
+}

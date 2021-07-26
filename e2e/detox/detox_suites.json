@@ -1,0 +1,8 @@
+{
+  "Sanity": [
+    "exampleFlow.positive.e2e"
+  ],
+  "Nightly": [
+    "exampleFlow.positive.e2e"
+  ]
+}

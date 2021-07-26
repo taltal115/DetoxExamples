@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+	"importHelpers": false,
+	"inlineSourceMap": true,
+	"noEmitOnError": true,
+    "types": ["jest", "node", "@testing-library/jest-native/extend-expect"]
+  },
+  "include": [
+	"src"
+	],
+	"exclude": [
+		"jest-config",
+		"e2e/__cases__",
+		"e2e/__templates__",
+		"e2e/__workdir_synlink__"
+	]
+}
